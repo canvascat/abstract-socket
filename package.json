@@ -1,0 +1,55 @@
+{
+  "name": "abstract-socket",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/canvascat/abstract-socket.git"
+  },
+  "keywords": [
+    "abstract-socket"
+  ],
+  "author": {
+    "name": "canvascat",
+    "email": "canvascat@outlook.com"
+  },
+  "files": [
+    "binding.gyp",
+    "src",
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "scripts": {
+    "build": "tsdown",
+    "install": "node -e \"if (!['linux', 'darwin'].includes(process.platform)) { process.exit(0); }\" && prebuild-install || node-gyp rebuild --release",
+    "build-release": "node-gyp rebuild --release",
+    "test": "vitest",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix"
+  },
+  "license": "MIT",
+  "packageManager": "pnpm@10.12.4",
+  "devDependencies": {
+    "@types/node": "^24.0.10",
+    "oxlint": "^1.5.0",
+    "tsdown": "^0.12.9",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.4"
+  },
+  "dependencies": {
+    "nan": "^2.22.2",
+    "prebuild-install": "^7.1.3"
+  }
+}
