@@ -1,6 +1,6 @@
-# abstract-socket
+# better-abstractsocket
 
-`abstract-socket` 是一个 Node.js 模块，用于创建和操作抽象 Unix 域套接字，仅支持 Linux 和 macOS 系统。该模块封装了底层的套接字操作，为开发者提供了更便捷的接口来创建和管理抽象套接字。
+`better-abstractsocket` 是一个 Node.js 模块，用于创建和操作抽象 Unix 域套接字，仅支持 Linux 和 macOS 系统。该模块封装了底层的套接字操作，为开发者提供了更便捷的接口来创建和管理抽象套接字。
 
 ## 功能特性
 - **平台支持**：仅支持 Linux 和 macOS 系统。
@@ -9,25 +9,25 @@
 
 ## 安装
 ```bash
-pnpm install abstract-socket
+pnpm install better-abstractsocket
 ```
 
 ## 使用示例
 ### 创建服务器
 ```typescript
-import AbstractSocket from 'abstract-socket';
+import AbstractSocket from 'better-abstractsocket';
 
 const server = new AbstractSocket.Server();
-server.listen('abstract-socket-example', () => {
-    console.log('Server is listening on abstract-socket-example');
+server.listen('better-abstractsocket-example', () => {
+    console.log('Server is listening on better-abstractsocket-example');
 });
 ```
 
 ### 创建连接
 ```typescript
-import { createConnection } from 'abstract-socket';
+import { createConnection } from 'better-abstractsocket';
 
-const socket = createConnection('abstract-socket-example', () => {
+const socket = createConnection('better-abstractsocket-example', () => {
     console.log('Connected to abstract socket');
 });
 ```
@@ -40,7 +40,7 @@ const socket = createConnection('abstract-socket-example', () => {
 用于创建一个到指定抽象套接字的连接。
 
 ### `supported`
-一个布尔值，指示当前环境是否支持 `abstract-socket` 模块。
+一个布尔值，指示当前环境是否支持 `better-abstractsocket` 模块。
 
 ## 开发依赖
 - `@types/node`: `^24.0.10`

@@ -1,5 +1,5 @@
 {
-  "name": "abstract-socket",
+  "name": "better-abstractsocket",
   "version": "1.0.0",
   "description": "A Node.js module for abstract Unix domain sockets on Linux and macOS.",
   "type": "module",
