@@ -1,7 +1,7 @@
 {
   "name": "abstract-socket",
   "version": "1.0.0",
-  "description": "",
+  "description": "A Node.js module for abstract Unix domain sockets on Linux and macOS.",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -9,8 +9,15 @@
     "type": "git",
     "url": "git+https://github.com/canvascat/abstract-socket.git"
   },
+  "homepage": "https://github.com/canvascat/abstract-socket#readme",
+  "bugs": {
+    "url": "https://github.com/canvascat/abstract-socket/issues"
+  },
   "keywords": [
-    "abstract-socket"
+    "abstract-socket",
+    "unix-domain-socket",
+    "linux",
+    "macos"
   ],
   "author": {
     "name": "canvascat",
