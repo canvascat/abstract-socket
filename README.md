@@ -1,19 +1,20 @@
 # better-abstractsocket
 
-`better-abstractsocket` 是一个 Node.js 模块，用于创建和操作抽象 Unix 域套接字，仅支持 Linux 和 macOS 系统。该模块封装了底层的套接字操作，为开发者提供了更便捷的接口来创建和管理抽象套接字。
+[English](README.md)  | [简体中文](README.zh-CN.md)
 
-## 功能特性
-- **平台支持**：仅支持 Linux 和 macOS 系统。
-- **核心功能**：提供了创建套接字（`socket`）、绑定地址（`bind`）、连接套接字（`connect`）和关闭套接字（`close`）的功能。
-- **异常处理**：自定义 `AbstractSocketErrnoException` 类，方便处理套接字操作中的错误。
+`better-abstractsocket` is a Node.js module designed to create and manipulate abstract Unix domain sockets. It only supports Linux and macOS systems. This module encapsulates low - level socket operations, providing developers with a more convenient interface to create and manage abstract sockets.
 
-## 安装
+## Features
+- **Platform Support**: Only supports Linux and macOS systems.
+- **Core Functions**: Provides functions to create sockets (`socket`), bind addresses (`bind`), connect to sockets (`connect`), and close sockets (`close`).
+
+## Installation
 ```bash
 pnpm install better-abstractsocket
 ```
 
-## 使用示例
-### 创建服务器
+## Usage Examples
+### Create a Server
 ```typescript
 import AbstractSocket from 'better-abstractsocket';
 
@@ -23,7 +24,7 @@ server.listen('better-abstractsocket-example', () => {
 });
 ```
 
-### 创建连接
+### Create a Connection
 ```typescript
 import { createConnection } from 'better-abstractsocket';
 
@@ -32,34 +33,12 @@ const socket = createConnection('better-abstractsocket-example', () => {
 });
 ```
 
-## API 文档
+## API Documentation
 ### `AbstractSocket.Server`
-继承自 `net.Server`，提供 `listen` 方法用于监听抽象套接字。
+Inherits from `net.Server` and provides the `listen` method to listen on an abstract socket.
 
 ### `createConnection`
-用于创建一个到指定抽象套接字的连接。
+Used to create a connection to a specified abstract socket.
 
 ### `supported`
-一个布尔值，指示当前环境是否支持 `better-abstractsocket` 模块。
-
-## 开发依赖
-- `@types/node`: `^24.0.10`
-- `tsdown`: `^0.12.9`
-- `typescript`: `^5.8.3`
-- `vitest`: `^3.2.4`
-
-## 生产依赖
-- `nan`: `^2.22.2`
-- `prebuild-install`: `^7.1.3`
-
-## 构建和安装
-```bash
-# 构建项目
-pnpm run build
-
-# 安装并构建发布版本（仅 Linux 和 macOS）
-pnpm run install
-```
-
-## 许可协议
-本项目采用 [MIT 许可协议](LICENSE)。
+A boolean value indicating whether the current environment supports the `better-abstractsocket` module.
