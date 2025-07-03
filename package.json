@@ -1,6 +1,6 @@
 {
   "name": "better-abstractsocket",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Node.js module for abstract Unix domain sockets on Linux and macOS.",
   "type": "module",
   "main": "dist/index.js",
@@ -40,7 +40,7 @@
   },
   "scripts": {
     "build": "tsdown",
-    "install": "node -e \"if (!['linux', 'darwin'].includes(process.platform)) { process.exit(0); }\" && prebuild-install || node-gyp rebuild --release",
+    "install": "node install.cjs",
     "build-release": "node-gyp rebuild --release",
     "test": "vitest",
     "lint": "oxlint",
